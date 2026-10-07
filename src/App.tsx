@@ -72,26 +72,28 @@ export function App() {
   return (
     <>
       <a className="skip" href="#results">Skip to results</a>
-      <header className="top">
-        <div>
-          <h1>AnchorTrace Studio</h1>
-          <p className="tagline">Explain a SEP-24 anchor payment from evidence. Read-only, local to this page.</p>
+      <header>
+        <div className="top">
+          <div>
+            <h1>AnchorTrace Studio</h1>
+            <p className="tagline">Explain a SEP-24 anchor payment from evidence. Read-only, local to this page.</p>
+          </div>
+          <ul className="assurances" aria-label="Guarantees and versions">
+            <li>Runs in your browser; the page is not allowed to open network connections</li>
+            <li>No keys, no signing, no payments</li>
+            <li data-testid="pairing">SDK {TOOL_VERSION}, report schema v{REPORT_VERSION}</li>
+          </ul>
         </div>
-        <ul className="assurances" aria-label="Guarantees and versions">
-          <li>Runs in your browser; the page is not allowed to open network connections</li>
-          <li>No keys, no signing, no payments</li>
-          <li data-testid="pairing">SDK {TOOL_VERSION}, report schema v{REPORT_VERSION}</li>
-        </ul>
+        <div className="notice" role="note">
+          <strong>Confirmation on chain is not a bank payout.</strong> For a withdrawal, a matching Stellar payment shows only the wallet-side transfer; the anchor&apos;s bank or cash payout cannot be observed here.
+        </div>
+        {!compat.ok ? (
+          <div className="blocking" role="alert" data-testid="compat-error">
+            <strong>Studio and SDK are incompatible.</strong> Results are disabled until they are re-paired.
+            <ul>{compat.problems.map((p) => <li key={p}>{p}</li>)}</ul>
+          </div>
+        ) : null}
       </header>
-      <div className="notice" role="note">
-        <strong>Confirmation on chain is not a bank payout.</strong> For a withdrawal, a matching Stellar payment shows only the wallet-side transfer; the anchor&apos;s bank or cash payout cannot be observed here.
-      </div>
-      {!compat.ok ? (
-        <div className="blocking" role="alert" data-testid="compat-error">
-          <strong>Studio and SDK are incompatible.</strong> Results are disabled until they are re-paired.
-          <ul>{compat.problems.map((p) => <li key={p}>{p}</li>)}</ul>
-        </div>
-      ) : null}
       <main className="layout">
         <div className="side">
           {compat.ok ? <ExampleList activeId={activeExample} onSelect={selectExample} onCopyToForm={copyToForm} /> : null}

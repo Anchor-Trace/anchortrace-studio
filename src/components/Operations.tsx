@@ -43,8 +43,7 @@ export function Operations({ candidates, highlighted }: { candidates: Candidate[
               <dd className="mono">{c.memo === null ? "none" : `${c.memo} (${c.memoType ?? "?"})`}</dd>
             </dl>
             {c.checks.length > 0 ? (
-              <table className="checks">
-                <caption className="sr-only">Field-by-field comparison with the record</caption>
+              <table className="checks" aria-label="Field-by-field comparison with the record">
                 <thead>
                   <tr>
                     <th scope="col">Field</th>
