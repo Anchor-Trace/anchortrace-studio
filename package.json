@@ -1,0 +1,37 @@
+{
+  "name": "anchortrace-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser investigation studio for AnchorTrace: reconcile a SEP-24 record with Stellar payment evidence entirely in the browser.",
+  "license": "MIT",
+  "author": "Anas Abubakar",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "pnpm run check:pairing && tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check:pairing": "node scripts/check-pairing.mjs"
+  },
+  "dependencies": {
+    "@anasabubakar/anchortrace-sdk": "file:vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "typescript": "7.0.2",
+    "vite": "8.3.3",
+    "vitest": "5.0.3"
+  }
+}
