@@ -16,7 +16,7 @@
     "preview": "vite preview --port 4173 --strictPort",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
-    "test:e2e": "playwright test",
+    "test:e2e": "pnpm run build && playwright test",
     "check:pairing": "node scripts/check-pairing.mjs"
   },
   "dependencies": {
