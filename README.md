@@ -6,6 +6,10 @@ Investigate an anchor payment in your browser. Paste a SEP-24 transaction record
 
 This is the browser front end of [anchortrace-sdk](../anchortrace-sdk). It contains no reconciliation logic of its own: it bundles a pinned build of the SDK and displays the SDK's report.
 
+![Wrong issuer example](docs/evidence/screenshots/02-wrong-issuer-desktop.png)
+
+Screenshots in `docs/evidence/screenshots/` were taken from the production build with Playwright (`01` is the empty state).
+
 ## What you can do
 - Pick one of 18 **synthetic examples** (a made-up SEP-24 record around a recorded Stellar testnet transaction): matched, wrong destination, wrong issuer, wrong amount, ambiguous multi-operation, path payment, claimable balance, Soroban transfer, pending, missing evidence, reordered and duplicate status updates, and more. The browser re-runs the SDK on the example and checks the result equals the report the SDK generated.
 - Paste or upload your own record and Horizon evidence (an AnchorTrace evidence file, or a raw `{ "transaction": ..., "operations": ... }` pair taken from `/transactions/<hash>` and `/transactions/<hash>/operations`), choose the fee policy and other verdict options, and press Reconcile.
