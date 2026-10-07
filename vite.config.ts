@@ -1,5 +1,7 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig, type Plugin } from "vite";
+import type { UserConfig } from "vite";
+import type { InlineConfig } from "vitest/node";
 
 // The production page may not open any network connection: connect-src 'none' is enforced by the browser, not just promised.
 const csp: Plugin = {
@@ -11,7 +13,10 @@ const csp: Plugin = {
   },
 };
 
-export default defineConfig({
+const config: UserConfig & { test: InlineConfig } = {
   plugins: [react(), csp],
   build: { target: "es2023", sourcemap: false },
-});
+  // Unit tests only; the Playwright specs in e2e/ run with `pnpm test:e2e`.
+  test: { include: ["test/**/*.test.ts"], environment: "node" },
+};
+export default defineConfig(config);
