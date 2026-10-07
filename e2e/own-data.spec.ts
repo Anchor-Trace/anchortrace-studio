@@ -126,6 +126,13 @@ test.describe("error and empty states", () => {
     await expect(page.getByTestId("no-evidence")).toBeVisible();
   });
 
+  test("a file over 5 MB is refused before it is read into the page", async ({ page }) => {
+    await page.goto("/");
+    await page.locator('input[type="file"]:not([multiple])').first().setInputFiles({ name: "huge.json", mimeType: "application/json", buffer: Buffer.alloc(5_100_000, 120) });
+    await expect(page.getByRole("alert").filter({ hasText: "huge.json is larger than 5 MB" })).toBeVisible();
+    await expect(page.getByLabel(/SEP-24 transaction record/)).toHaveValue("");
+  });
+
   test("a record file can be uploaded", async ({ page }) => {
     await page.goto("/");
     await page.locator('input[type="file"]:not([multiple])').first().setInputFiles({ name: "record.json", mimeType: "application/json", buffer: Buffer.from(recordText("matched-withdrawal")) });
