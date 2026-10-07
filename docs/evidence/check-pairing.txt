@@ -1,0 +1,1 @@
+pairing OK: sdk 0.1.0 (v0.1.0), tarball sha256 1697491a1251..., report schema 1

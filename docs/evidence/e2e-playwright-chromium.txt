@@ -1,0 +1,82 @@
+$ pnpm run build && playwright test
+$ pnpm run check:pairing && tsc -p tsconfig.json --noEmit && vite build
+$ node scripts/check-pairing.mjs
+pairing OK: sdk 0.1.0 (v0.1.0), tarball sha256 1697491a1251..., report schema 1
+vite v8.3.3 building client environment for production...
+transforming...
+✓ 144 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.12 kB │ gzip:   0.64 kB
+dist/assets/index-D_3wpILG.css   10.45 kB │ gzip:   3.05 kB
+dist/assets/index-Bl19kRNd.js   542.91 kB │ gzip: 130.70 kB
+
+✓ built in 782ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Running 58 tests using 2 workers
+
+  ✓   1 [chromium] › e2e/access-and-privacy.spec.ts:30:3 › no network, enforced › states that it is local, read-only and paired with a specific SDK (380ms)
+  ✓   2 [chromium] › e2e/access-and-privacy.spec.ts:5:3 › no network, enforced › every request stays on the studio origin, and the CSP blocks any connection from the page (607ms)
+  ✓   3 [chromium] › e2e/access-and-privacy.spec.ts:38:3 › keyboard and assistive technology › the skip link is the first tab stop; examples can be chosen with Enter and Space; focus lands on the result (519ms)
+  ✓   4 [chromium] › e2e/access-and-privacy.spec.ts:58:3 › keyboard and assistive technology › the whole form is operable by keyboard: tab to Reconcile and submit with Enter on the button (319ms)
+  ✓   5 [chromium] › e2e/access-and-privacy.spec.ts:67:3 › keyboard and assistive technology › every form control has an accessible name (204ms)
+  ✓   6 [chromium] › e2e/access-and-privacy.spec.ts:80:5 › keyboard and assistive technology › axe finds no violations (light), empty state and a result (4.3s)
+  ✓   7 [chromium] › e2e/access-and-privacy.spec.ts:80:5 › keyboard and assistive technology › axe finds no violations (dark), empty state and a result (4.3s)
+  ✓   8 [chromium] › e2e/access-and-privacy.spec.ts:95:5 › responsive layout › no horizontal scrolling on phone (579ms)
+  ✓   9 [chromium] › e2e/access-and-privacy.spec.ts:95:5 › responsive layout › no horizontal scrolling on tablet (645ms)
+  ✓  11 [chromium] › e2e/access-and-privacy.spec.ts:107:3 › responsive layout › on a phone the results come after the controls in a single column (332ms)
+  ✓  10 [chromium] › e2e/access-and-privacy.spec.ts:95:5 › responsive layout › no horizontal scrolling on desktop (604ms)
+  ✓  12 [chromium] › e2e/examples.spec.ts:26:3 › first load › shows the honest framing, the pairing and an empty state (320ms)
+  ✓  13 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › matched-withdrawal is matched (478ms)
+  ✓  14 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › wrong-destination is discrepant (592ms)
+  ✓  15 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › wrong-issuer is discrepant (619ms)
+  ✓  16 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › wrong-amount is discrepant (638ms)
+  ✓  17 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › ambiguous-multi-operation is ambiguous (609ms)
+  ✓  18 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › wrong-memo is discrepant (732ms)
+  ✓  19 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › failed-onchain-transaction is discrepant (710ms)
+  ✓  20 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › unsupported-path-payment is unsupported (662ms)
+  ✓  21 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › unsupported-claimable-balance is unsupported (600ms)
+  ✓  22 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › unsupported-soroban-transfer is unsupported (405ms)
+  ✓  23 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › pending-awaiting-user-transfer is pending (475ms)
+  ✓  24 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › pending-external-chain-confirmed is pending (554ms)
+  ✓  25 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › insufficient-missing-evidence is insufficient_evidence (570ms)
+  ✓  26 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › error-status-funds-received is discrepant (616ms)
+  ✓  27 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › reordered-and-duplicate-updates is matched (549ms)
+  ✓  28 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › status-history-conflict is ambiguous (506ms)
+  ✓  29 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › matched-deposit is matched (503ms)
+  ✓  30 [chromium] › e2e/examples.spec.ts:40:5 › every shipped example, run by the real SDK in the browser › refunded-with-onchain-refund is matched (519ms)
+  ✓  31 [chromium] › e2e/examples.spec.ts:54:3 › what the findings show › wrong issuer: the conflicting operation is highlighted and the issuer row differs (537ms)
+  ✓  32 [chromium] › e2e/examples.spec.ts:66:3 › what the findings show › ambiguous multi-operation: both operations are conflicting; none is declared the match (457ms)
+  ✓  33 [chromium] › e2e/examples.spec.ts:75:3 › what the findings show › a finding's button highlights the operations it references (549ms)
+  ✓  34 [chromium] › e2e/examples.spec.ts:85:3 › what the findings show › a matched withdrawal still says the payout is not verified (428ms)
+  ✓  35 [chromium] › e2e/examples.spec.ts:92:3 › what the findings show › unsupported forms are labelled unsupported, with the reason (345ms)
+  ✓  36 [chromium] › e2e/examples.spec.ts:99:3 › what the findings show › duplicate and reordered updates collapse to one ordered timeline (366ms)
+  ✓  37 [chromium] › e2e/export.spec.ts:20:3 › redacted export › default redaction removes accounts and memos, keeps issuers, and the file is a valid v1 report (458ms)
+  ✓  38 [chromium] › e2e/export.spec.ts:35:3 › redacted export › choosing all categories also removes issuers and hashes (529ms)
+  ✓  39 [chromium] › e2e/export.spec.ts:44:3 › redacted export › the preview shows the redacted text and the full download is clearly marked as not redacted (482ms)
+  ✓  40 [chromium] › e2e/export.spec.ts:56:3 › redacted export › with nothing selected only the full report can be downloaded (562ms)
+  ✓  41 [chromium] › e2e/export.spec.ts:64:3 › redacted export › markdown export carries the not-a-bank-payout note (511ms)
+  ✓  42 [chromium] › e2e/own-data.spec.ts:19:3 › your own data › paste a record and evidence: the result is the SDK's, labelled as your input (569ms)
+  ✓  43 [chromium] › e2e/own-data.spec.ts:29:3 › your own data › a raw Horizon pair is accepted as evidence (577ms)
+  ✓  44 [chromium] › e2e/own-data.spec.ts:38:3 › your own data › the fee policy option changes the verdict and is echoed in the result (616ms)
+  ✓  45 [chromium] › e2e/own-data.spec.ts:49:3 › your own data › a record with no evidence is insufficient or pending, never matched (500ms)
+  ✓  47 [chromium] › e2e/own-data.spec.ts:69:3 › error and empty states › empty record shows an error that is an input problem, not a verdict (408ms)
+  ✓  46 [chromium] › e2e/own-data.spec.ts:57:3 › your own data › copying an example into the form lets the user edit it (571ms)
+  ✓  48 [chromium] › e2e/own-data.spec.ts:79:3 › error and empty states › invalid JSON is reported with the parser's message (360ms)
+  ✓  49 [chromium] › e2e/own-data.spec.ts:86:3 › error and empty states › a JSON document that is not a SEP-24 record lists the schema issues (351ms)
+  ✓  50 [chromium] › e2e/own-data.spec.ts:95:3 › error and empty states › float amounts are rejected as unusable amounts, not rounded (427ms)
+  ✓  51 [chromium] › e2e/own-data.spec.ts:104:3 › error and empty states › evidence that is not valid shows an error and leaves the form intact (442ms)
+  ✓  52 [chromium] › e2e/own-data.spec.ts:113:3 › error and empty states › a wrong tolerance value is refused with a message (331ms)
+  ✓  53 [chromium] › e2e/own-data.spec.ts:121:3 › error and empty states › an evidence file can be added and removed (308ms)
+  ✓  55 [chromium] › e2e/own-data.spec.ts:136:3 › error and empty states › a record file can be uploaded (264ms)
+  ✓  56 [chromium] › e2e/own-data.spec.ts:144:3 › saved reports and the version check › a saved v1 report opens and is shown as saved, not recomputed (324ms)
+  ✓  57 [chromium] › e2e/own-data.spec.ts:152:3 › saved reports and the version check › a report with another schema version is refused with a version-specific message (281ms)
+  ✓  58 [chromium] › e2e/own-data.spec.ts:160:3 › saved reports and the version check › a tampered v1 report is refused by schema validation (358ms)
+  ✓  54 [chromium] › e2e/own-data.spec.ts:129:3 › error and empty states › a file over 5 MB is refused before it is read into the page (1.5s)
+
+  58 passed (22.0s)
