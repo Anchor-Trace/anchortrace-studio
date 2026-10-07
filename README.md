@@ -49,13 +49,13 @@ The first `pnpm test:e2e` needs a browser: `pnpm exec playwright install chromiu
 - Redaction is the SDK's: values become stable aliases over sorted distinct values; secret keys are always removed; free text in a record's `message` is only scanned for addresses, emails and known memos. Review exports before sharing.
 
 ## How it was verified
-Run on 2026-10-07: Vitest 20 tests; Playwright 58 tests in Google Chrome 154 against the production build, including axe-core accessibility scans (light and dark), keyboard operation, the CSP check, 18 examples, redaction downloads and no horizontal scrolling at 375, 768 and 1440 px. Transcripts are in `docs/evidence/`.
+Run on 2026-10-07: Vitest 20 tests; Playwright 58 tests against the production build, passing both in Playwright's Chromium (headless shell 153, the path CI uses) and in an installed Google Chrome 154. They include axe-core accessibility scans (light and dark), keyboard operation, the CSP check, all 18 examples, redaction downloads, the 5 MB limit and no horizontal scrolling at 375, 768 and 1440 px. Transcripts: `docs/evidence/vitest.txt`, `docs/evidence/e2e-playwright-chromium.txt`, `docs/evidence/e2e-google-chrome-154.txt`, `docs/evidence/check-pairing.txt`.
 
 ## Limitations
 - Version one covers SEP-24 and classic direct payments only; path payments, claimable balances and Soroban transfers are reported as `unsupported`.
 - The studio cannot fetch evidence. Use Horizon (or the SDK CLI's `--horizon`) to get the JSON.
 - Example SEP-24 records are synthetic. No anchor, wallet or support team has used or validated this tool.
-- Verification used one real browser engine (Chrome 154 on Linux). Other browsers, screen readers and real phones were not tested; axe-core finds only a subset of accessibility problems.
+- Verification used Chromium-based engines only (Chromium 153 and Chrome 154, Linux). Other browsers, screen readers and real phones were not tested; axe-core finds only a subset of accessibility problems.
 - The loading state is exercised in the state-machine unit test; in the browser the SDK call is fast enough that it is rarely visible.
 - Large inputs are processed on the main thread (5 MB cap).
 - Not deployed or published.
