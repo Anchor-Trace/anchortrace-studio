@@ -27,7 +27,8 @@ test.describe("first load", () => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1, name: "AnchorTrace Studio" })).toBeVisible();
     await expect(page.getByRole("note")).toContainText("Confirmation on chain is not a bank payout");
-    await expect(page.getByTestId("pairing")).toHaveText("SDK 0.1.0, report schema v1");
+    const pairedSdk = JSON.parse((await import("node:fs")).readFileSync("pairing.json", "utf8")).sdk.version;
+    await expect(page.getByTestId("pairing")).toHaveText(`SDK ${pairedSdk}, report schema v1`);
     await expect(page.getByTestId("empty-state")).toBeVisible();
     await expect(page.getByRole("heading", { name: "Synthetic examples" })).toBeVisible();
     await expect(page.getByTestId("compat-error")).toHaveCount(0);

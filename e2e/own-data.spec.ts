@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { expect, test, type Page } from "@playwright/test";
 
-const sdk = (p: string) => new URL(`../node_modules/@anasabubakar/anchortrace-sdk/${p}`, import.meta.url).pathname;
+const sdk = (p: string) => new URL(`../node_modules/@anas.abubakar/anchortrace-sdk/${p}`, import.meta.url).pathname;
 const bundle = JSON.parse(readFileSync(sdk("examples/examples.v1.json"), "utf8"));
 const entry = (id: string) => bundle.cases.find((c: { id: string }) => c.id === id);
 const recordText = (id: string) => JSON.stringify({ transactions: entry(id).case.records });

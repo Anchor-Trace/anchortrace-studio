@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 
-const sdk = (p: string) => new URL(`../node_modules/@anasabubakar/anchortrace-sdk/${p}`, import.meta.url).pathname;
+const sdk = (p: string) => new URL(`../node_modules/@anas.abubakar/anchortrace-sdk/${p}`, import.meta.url).pathname;
 const bundle = JSON.parse(readFileSync(sdk("examples/examples.v1.json"), "utf8"));
 const wrongIssuer = bundle.cases.find((c: { id: string }) => c.id === "wrong-issuer");
 const WALLET = "GCWEQIIHHZN2BS5Y7VPXMTMNHFL7Y5GEWJFG4QKPGRUIOP76JBVUXFWH";

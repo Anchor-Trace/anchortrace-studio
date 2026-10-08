@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import { cpSync, mkdtempSync, readFileSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { CASE_VERSION, EVIDENCE_VERSION, REPORT_VERSION, TOOL_VERSION } from "@anasabubakar/anchortrace-sdk";
+import { CASE_VERSION, EVIDENCE_VERSION, REPORT_VERSION, TOOL_VERSION } from "@anas.abubakar/anchortrace-sdk";
 import { describe, expect, it } from "vitest";
 import { checkCompatibility, openSavedReport } from "../src/compat.ts";
 import { bundle } from "../src/examples.ts";
@@ -66,7 +66,8 @@ describe("check-pairing script", () => {
   it("fails when the paired SDK version differs from the installed one", () => {
     const r = run(inTemp((p) => (p.sdk.version = "0.2.0")));
     expect(r.code).toBe(1);
-    expect(r.out).toMatch(/installed SDK is 0\.1\.0/);
+    const installed = JSON.parse(readFileSync("node_modules/@anas.abubakar/anchortrace-sdk/package.json", "utf8")).version;
+    expect(r.out).toContain(`installed SDK is ${installed}`);
   });
   it("fails when a vendored schema no longer matches the SDK's", () => {
     const r = run(inTemp((p) => (p.vendoredSchemas["vendor/schema/report.v1.schema.json"] = "f".repeat(64))));
