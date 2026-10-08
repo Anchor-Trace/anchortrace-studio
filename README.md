@@ -44,7 +44,7 @@ The first `pnpm test:e2e` needs a browser: `pnpm exec playwright install chromiu
 ## SDK pairing
 | Studio | SDK | Report / evidence / case schema | Pinned artifact |
 |---|---|---|---|
-| 0.1.0 | `@anasabubakar/anchortrace-sdk` 0.1.0, git tag `v0.1.0`, commit `6632cb824d7f7a915d77ab020e117f1531c5da53` | 1 / 1 / 1 | `vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz` (SHA-256 `1697491a1251e534bcdd6a68e3b2ca7c29524e3a77d0846e1c5fb25ccff6b3ac`) |
+| 0.1.1 | `@anas.abubakar/anchortrace-sdk` 0.1.1, git tag `v0.1.1`, commit `e480415795b907f2cc9408febc98b957bc537c43` | 1 / 1 / 1 | `vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz` (SHA-256 `1697491a1251e534bcdd6a68e3b2ca7c29524e3a77d0846e1c5fb25ccff6b3ac`) |
 
 `pairing.json` is the source of truth. `pnpm run check:pairing` (run by `pnpm build` and CI) fails if the tarball, the installed SDK or the vendored schemas in `vendor/schema/` drift. At run time the page compares the bundled SDK's versions with the pairing and refuses to show results if they differ. There are no sibling-path imports: the repository builds from a clean clone.
 
