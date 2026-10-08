@@ -65,3 +65,9 @@ Run on 2026-10-07: Vitest 20 tests; Playwright 58 tests against the production b
 - The loading state is exercised in the state-machine unit test; in the browser the SDK call is fast enough that it is rarely visible.
 - Large inputs are processed on the main thread (5 MB cap).
 - Live on Vercel; not published to npm (it is an app).
+
+## Contributors
+
+<a href="https://github.com/Anasabubakar/anchortrace-studio/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Anasabubakar/anchortrace-studio" alt="Contributors to anchortrace-studio" />
+</a>
