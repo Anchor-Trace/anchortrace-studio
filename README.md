@@ -64,4 +64,4 @@ Run on 2026-10-07: Vitest 20 tests; Playwright 58 tests against the production b
 - Verification used Chromium-based engines only (Chromium 153 and Chrome 154, Linux). Other browsers, screen readers and real phones were not tested; axe-core finds only a subset of accessibility problems.
 - The loading state is exercised in the state-machine unit test; in the browser the SDK call is fast enough that it is rarely visible.
 - Large inputs are processed on the main thread (5 MB cap).
-- Not deployed or published.
+- Live on Vercel; not published to npm (it is an app).
