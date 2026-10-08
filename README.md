@@ -1,6 +1,11 @@
+<p align="center"><img src="docs/assets/banner.svg" alt="anchortrace-studio" width="100%"></p>
+
 # anchortrace-studio
 
-**Documentation:** https://stellar-developer-tools.gitbook.io/anchortrace-studio/
+[![CI](https://github.com/Anchor-Trace/anchortrace-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/Anchor-Trace/anchortrace-studio/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Release](https://img.shields.io/github/v/release/Anchor-Trace/anchortrace-studio)](https://github.com/Anchor-Trace/anchortrace-studio/releases)
+
+[Documentation](https://stellar-developer-tools.gitbook.io/anchortrace-studio/) · [Live demo](https://anchortrace-studio-anasamasama.vercel.app) · [Core repository](https://github.com/Anchor-Trace/anchortrace-sdk) · [Issues](https://github.com/Anchor-Trace/anchortrace-studio/issues) · [Discussions](https://github.com/Anchor-Trace/anchortrace-studio/discussions)
+
 
 Hosted demo: https://anchortrace-studio-anasamasama.vercel.app
 
@@ -8,7 +13,7 @@ Investigate an anchor payment in your browser. Paste a SEP-24 transaction record
 
 > **Confirmation on chain is not a bank payout.** For a withdrawal, a matching Stellar payment shows only the wallet-side transfer. The anchor's bank or cash payout cannot be observed here, and every result says so.
 
-This is the browser front end of [anchortrace-sdk](https://github.com/Anasabubakar/anchortrace-sdk). It contains no reconciliation logic of its own: it bundles a pinned build of the SDK and displays the SDK's report.
+This is the browser front end of [anchortrace-sdk](https://github.com/Anchor-Trace/anchortrace-sdk). It contains no reconciliation logic of its own: it bundles a pinned build of the SDK and displays the SDK's report.
 
 ![Wrong issuer example](docs/evidence/screenshots/02-wrong-issuer-desktop.png)
 
@@ -68,8 +73,43 @@ Run on 2026-10-07: Vitest 20 tests; Playwright 58 tests against the production b
 - Large inputs are processed on the main thread (5 MB cap).
 - Live on Vercel; not published to npm (it is an app).
 
+## Repository layout
+
+- `docs/`: decision records (ADRs), evidence and assets
+- `e2e/`: Playwright browser tests
+- `gitbook/`: source of the GitBook documentation
+- `scripts/`: build, generation and recording scripts
+- `src/`: source
+- `test/`: tests
+- `vendor/`: pinned artifacts from the paired core repository
+
+## Documentation
+
+The full documentation is at https://stellar-developer-tools.gitbook.io/anchortrace-studio/. It is built from the `gitbook/` folder of this repository and synced from `main`, so a fix to a page is a pull request here.
+
+## Contributing
+
+Open issues are scoped so one person can finish one in a single cycle, and each lists acceptance criteria. Read [CONTRIBUTING.md](CONTRIBUTING.md), pick an issue from the [issue list](https://github.com/Anchor-Trace/anchortrace-studio/issues), and say you are taking it before you start. Security reports go through [SECURITY.md](SECURITY.md), not public issues.
+
+## Maintainers
+
+| Maintainer | Role | GitHub |
+|---|---|---|
+| Anas Abubakar | Lead maintainer | [@Anasabubakar](https://github.com/Anasabubakar) |
+| Abdulbasit Fazazi | Co-maintainer | [@fazaziishola-coder](https://github.com/fazaziishola-coder) |
+
+## Community
+
+Questions and design discussion go in [GitHub Discussions](https://github.com/Anchor-Trace/anchortrace-studio/discussions). Bugs and scoped work go in [Issues](https://github.com/Anchor-Trace/anchortrace-studio/issues).
+
+## License
+
+MIT. See [LICENSE](LICENSE).
+
 ## Contributors
 
-<a href="https://github.com/Anasabubakar/anchortrace-studio/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Anasabubakar/anchortrace-studio" alt="Contributors to anchortrace-studio" />
+Thanks to all the contributors who have made this project possible.
+
+<a href="https://github.com/Anchor-Trace/anchortrace-studio/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Anchor-Trace/anchortrace-studio" alt="Contributors to anchortrace-studio" />
 </a>
