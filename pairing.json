@@ -1,12 +1,12 @@
 {
-  "studioVersion": "0.1.0",
+  "studioVersion": "0.1.1",
   "sdk": {
-    "package": "@anasabubakar/anchortrace-sdk",
-    "version": "0.1.0",
-    "gitTag": "v0.1.0",
-    "gitCommit": "6632cb824d7f7a915d77ab020e117f1531c5da53",
-    "tarball": "vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz",
-    "tarballSha256": "1697491a1251e534bcdd6a68e3b2ca7c29524e3a77d0846e1c5fb25ccff6b3ac"
+    "package": "@anas.abubakar/anchortrace-sdk",
+    "version": "0.1.1",
+    "gitTag": "v0.1.1",
+    "gitCommit": "e480415795b907f2cc9408febc98b957bc537c43",
+    "tarball": "vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz",
+    "tarballSha256": "ebe3b7702cfb51bbfc63a0521deb4783d0795a077e6704a6688f7d0912c418e4"
   },
   "schemaVersions": {
     "report": "1",

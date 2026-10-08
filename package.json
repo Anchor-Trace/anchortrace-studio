@@ -1,6 +1,6 @@
 {
   "name": "anchortrace-studio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Browser investigation studio for AnchorTrace: reconcile a SEP-24 record with Stellar payment evidence entirely in the browser.",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "check:pairing": "node scripts/check-pairing.mjs"
   },
   "dependencies": {
-    "@anasabubakar/anchortrace-sdk": "file:vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz",
+    "@anas.abubakar/anchortrace-sdk": "file:vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },

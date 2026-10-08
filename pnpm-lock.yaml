@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@anasabubakar/anchortrace-sdk':
-        specifier: file:vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz
-        version: file:vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz
+      '@anas.abubakar/anchortrace-sdk':
+        specifier: file:vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz
+        version: file:vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz
       react:
         specifier: 19.3.0
         version: 19.3.0
@@ -48,9 +48,9 @@ importers:
 
 packages:
 
-  '@anasabubakar/anchortrace-sdk@file:vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz':
-    resolution: {integrity: sha512-TJSdYu130512dno5NqH4OWcsG+aJsmUVrggqHsOVjysEMjXIkBWghTfRzE9UH1OcmQP+pjAFnuRPRHqoONpMtg==, tarball: file:vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz}
-    version: 0.1.0
+  '@anas.abubakar/anchortrace-sdk@file:vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz':
+    resolution: {integrity: sha512-NPuaY6UyilwgFdP9ZSl+pFg2Sodb+s8ymVhFFwunLPHhUklwjnQsK8FhPVu8N6uM1JzOxgSJNd3cXzkumQLZcg==, tarball: file:vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz}
+    version: 0.1.1
     engines: {node: '>=22'}
     hasBin: true
 
@@ -638,7 +638,7 @@ packages:
 
 snapshots:
 
-  '@anasabubakar/anchortrace-sdk@file:vendor/anasabubakar-anchortrace-sdk-0.1.0.tgz':
+  '@anas.abubakar/anchortrace-sdk@file:vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz':
     dependencies:
       commander: 15.0.0
       zod: 4.6.5
