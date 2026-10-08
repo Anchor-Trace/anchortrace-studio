@@ -6,7 +6,7 @@ Investigate an anchor payment in your browser. Paste a SEP-24 transaction record
 
 > **Confirmation on chain is not a bank payout.** For a withdrawal, a matching Stellar payment shows only the wallet-side transfer. The anchor's bank or cash payout cannot be observed here, and every result says so.
 
-This is the browser front end of [anchortrace-sdk](../anchortrace-sdk). It contains no reconciliation logic of its own: it bundles a pinned build of the SDK and displays the SDK's report.
+This is the browser front end of [anchortrace-sdk](https://github.com/Anasabubakar/anchortrace-sdk). It contains no reconciliation logic of its own: it bundles a pinned build of the SDK and displays the SDK's report.
 
 ![Wrong issuer example](docs/evidence/screenshots/02-wrong-issuer-desktop.png)
 
@@ -44,7 +44,7 @@ The first `pnpm test:e2e` needs a browser: `pnpm exec playwright install chromiu
 ## SDK pairing
 | Studio | SDK | Report / evidence / case schema | Pinned artifact |
 |---|---|---|---|
-| 0.1.1 | `@anas.abubakar/anchortrace-sdk` 0.1.1, git tag `v0.1.1`, commit `e480415795b907f2cc9408febc98b957bc537c43` | 1 / 1 / 1 | `vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz` (SHA-256 `1697491a1251e534bcdd6a68e3b2ca7c29524e3a77d0846e1c5fb25ccff6b3ac`) |
+| 0.1.1 | `@anas.abubakar/anchortrace-sdk` 0.1.1, git tag `v0.1.1`, commit `e480415795b907f2cc9408febc98b957bc537c43` | 1 / 1 / 1 | `vendor/anas.abubakar-anchortrace-sdk-0.1.1.tgz` (SHA-256 `ebe3b7702cfb51bbfc63a0521deb4783d0795a077e6704a6688f7d0912c418e4`) |
 
 `pairing.json` is the source of truth. `pnpm run check:pairing` (run by `pnpm build` and CI) fails if the tarball, the installed SDK or the vendored schemas in `vendor/schema/` drift. At run time the page compares the bundled SDK's versions with the pairing and refuses to show results if they differ. There are no sibling-path imports: the repository builds from a clean clone.
 
