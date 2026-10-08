@@ -1,5 +1,7 @@
 # anchortrace-studio
 
+Hosted demo: https://anchortrace-studio-anasamasama.vercel.app
+
 Investigate an anchor payment in your browser. Paste a SEP-24 transaction record and the Stellar evidence; see why they agree or not, with the conflicting operations highlighted. Nothing leaves the page.
 
 > **Confirmation on chain is not a bank payout.** For a withdrawal, a matching Stellar payment shows only the wallet-side transfer. The anchor's bank or cash payout cannot be observed here, and every result says so.
