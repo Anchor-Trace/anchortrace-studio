@@ -1,4 +1,4 @@
-import type { Outcome } from "@anasabubakar/anchortrace-sdk";
+import type { Outcome } from "@anas.abubakar/anchortrace-sdk";
 import { OUTCOME_LABEL } from "../labels.ts";
 
 /** Colour is never the only signal: every badge carries the outcome name and a distinct glyph. */

@@ -1,5 +1,5 @@
 import { useId, useMemo, useState } from "react";
-import type { TransactionReport } from "@anasabubakar/anchortrace-sdk";
+import type { TransactionReport } from "@anas.abubakar/anchortrace-sdk";
 import { OutcomeBadge } from "./OutcomeBadge.tsx";
 import { Operations, opKey } from "./Operations.tsx";
 

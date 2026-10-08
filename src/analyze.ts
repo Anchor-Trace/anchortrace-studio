@@ -1,4 +1,4 @@
-import { InputError, reconcileSupplied, type FeePolicy, type Report, type ReconcileOptions, type SuppliedFile } from "@anasabubakar/anchortrace-sdk";
+import { InputError, reconcileSupplied, type FeePolicy, type Report, type ReconcileOptions, type SuppliedFile } from "@anas.abubakar/anchortrace-sdk";
 import { bundle } from "./examples.ts";
 
 export const MAX_INPUT_BYTES = 5_000_000;

@@ -1,4 +1,4 @@
-import type { Report } from "@anasabubakar/anchortrace-sdk";
+import type { Report } from "@anas.abubakar/anchortrace-sdk";
 
 export type Source = { kind: "example"; id: string; reproduces: boolean } | { kind: "input" } | { kind: "saved_report"; label: string };
 

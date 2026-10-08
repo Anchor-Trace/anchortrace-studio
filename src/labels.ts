@@ -1,4 +1,4 @@
-import type { Outcome } from "@anasabubakar/anchortrace-sdk";
+import type { Outcome } from "@anas.abubakar/anchortrace-sdk";
 
 export const OUTCOME_LABEL: Record<Outcome, string> = {
   matched: "Matched",

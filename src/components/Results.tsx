@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import type { Report } from "@anasabubakar/anchortrace-sdk";
+import type { Report } from "@anas.abubakar/anchortrace-sdk";
 import { bundle } from "../examples.ts";
 import { OUTCOME_LABEL, OUTCOME_MEANING, OUTCOME_ORDER } from "../labels.ts";
 import type { Source, State } from "../state.ts";

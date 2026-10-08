@@ -1,4 +1,4 @@
-import type { Candidate } from "@anasabubakar/anchortrace-sdk";
+import type { Candidate } from "@anas.abubakar/anchortrace-sdk";
 
 const ROLE_TEXT: Record<Candidate["role"], string> = {
   matched: "Matches the record",

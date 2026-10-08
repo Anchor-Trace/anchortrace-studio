@@ -1,5 +1,5 @@
 import { useId, useMemo, useState } from "react";
-import { DEFAULT_REDACTION, REDACT_CATEGORIES, redactReport, renderMarkdown, renderText, type RedactCategory, type Report } from "@anasabubakar/anchortrace-sdk";
+import { DEFAULT_REDACTION, REDACT_CATEGORIES, redactReport, renderMarkdown, renderText, type RedactCategory, type Report } from "@anas.abubakar/anchortrace-sdk";
 import { downloadText } from "../download.ts";
 
 const CATEGORY_HELP: Record<RedactCategory, string> = {

@@ -1,5 +1,5 @@
 import { useId, useRef, useState, type ChangeEvent } from "react";
-import { FEE_POLICIES, type FeePolicy } from "@anasabubakar/anchortrace-sdk";
+import { FEE_POLICIES, type FeePolicy } from "@anas.abubakar/anchortrace-sdk";
 import { MAX_INPUT_BYTES, type UserInput } from "../analyze.ts";
 import { FEE_POLICY_LABEL } from "../labels.ts";
 

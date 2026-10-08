@@ -1,5 +1,5 @@
-import bundleJson from "@anasabubakar/anchortrace-sdk/examples/examples.v1.json";
-import type { Case, Report } from "@anasabubakar/anchortrace-sdk";
+import bundleJson from "@anas.abubakar/anchortrace-sdk/examples/examples.v1.json";
+import type { Case, Report } from "@anas.abubakar/anchortrace-sdk";
 
 export interface ExampleEntry {
   id: string;

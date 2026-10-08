@@ -1,4 +1,4 @@
-import { CASE_VERSION, EVIDENCE_VERSION, REPORT_VERSION, TOOL_VERSION, parseReport, type Report } from "@anasabubakar/anchortrace-sdk";
+import { CASE_VERSION, EVIDENCE_VERSION, REPORT_VERSION, TOOL_VERSION, parseReport, type Report } from "@anas.abubakar/anchortrace-sdk";
 import { pairing } from "./pairing.ts";
 
 export interface Compatibility {

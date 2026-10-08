@@ -1,5 +1,5 @@
 import { useMemo, useReducer, useState } from "react";
-import { TOOL_VERSION, REPORT_VERSION } from "@anasabubakar/anchortrace-sdk";
+import { TOOL_VERSION, REPORT_VERSION } from "@anas.abubakar/anchortrace-sdk";
 import { analyzeExample, analyzeUserInput, AnalyzeError, type UserInput } from "./analyze.ts";
 import { checkCompatibility, openSavedReport } from "./compat.ts";
 import { ExampleList } from "./components/ExampleList.tsx";
